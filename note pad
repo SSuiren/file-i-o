@@ -1,0 +1,40 @@
+
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+
+
+int main()
+{
+	string input;
+	string info;
+	
+	cout << "you may note down your information to a file, we will remember it." << endl;
+	cout << "name file." << endl;
+	cin >> input;
+	 cout <<"write your information." << endl;
+	
+
+	ofstream myfile(input);
+
+
+	cin >> info;
+
+	myfile << info << endl;
+
+	myfile.close();
+
+	string mytext;
+
+	ifstream Read(input);
+
+	while (getline (Read, mytext))
+	{
+		cout << info;
+	}
+
+	Read.close();
+}
